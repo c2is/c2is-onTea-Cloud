@@ -23,7 +23,7 @@ closedir($dir);
 
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{PROJECT NAME}</title>
+    <title>c2is-oneTea-Cloud</title>
 
     <meta name="description" content="">
     <meta name="author" content="C2iS">
@@ -47,8 +47,8 @@ closedir($dir);
 <div id="wrap">
     <header>
         <img src="http://ipsumimage.appspot.com/100x100?b=<?php echo $colorProject ?>&f=fefefe&l=logo" alt="">
-        <h1>PROJECT NAME</h1>
-        <h2>Lead FE : TRI@c2is</h2>
+        <h1>c2is-oneTea-Cloud</h1>
+        <h2>Lead FE : DJO@c2is</h2>
     </header>
     <section>
         <?php 

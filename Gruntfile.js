@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		src: [
 			'js/flexbox.js'
 		],
-		dest: 'js/flexbox.min.js'
+		dest: 'js/min/flexbox.min.js'
 	  }
     },
 

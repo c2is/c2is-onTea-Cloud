@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Flexbox</title>
+    <title>Nom du module</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -44,6 +44,6 @@
 	</div>
 
 	<script src="../vendors/jquery/jquery.min.js"></script>
-	<script src="../js/min/flexbox.min.js"></script>
+	<!--<script src="../js/min/flexbox.min.js"></script>-->
 </body>
 </html>
