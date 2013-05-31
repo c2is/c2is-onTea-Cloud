@@ -23,21 +23,11 @@ module.exports = function(grunt) {
 	},
 
     uglify: {
-      modernizr: {
-        src: 'vendors/modernizr/modernizr.js',
-        dest: 'js/min/modernizr.min.js'
-      },
-      vendors: {
-        src: [
-          'vendors/jquery/jquery.js'
-        ],
-        dest: 'js/min/vendors.min.js'
-      }, 
-	  front: {
+	  flexbox: {
 		src: [
-			'js/front.js'
+			'js/flexbox.js'
 		],
-		dest: 'js/min/front.min.js'
+		dest: 'js/flexbox.min.js'
 	  }
     },
 
@@ -47,27 +37,13 @@ module.exports = function(grunt) {
 		  compile: true
         },
         files: {
-          'css/screen.css': [
+          'css/normalize.css': [
 			'vendors/normalize-css/normalize.css'
-            , 'less/screen.less'
-//            , 'less/output.less'
-//            , 'less/output2.less'
+          ],
+          'css/flexbox.css': [
+             'less/flexbox.less'
           ]
         }
-      }
-    },
-    css_img_2_data_uri: {
-      options: {
-          files: [
-              {
-                  src: 'vendors/plugin/plugin.css', //fichier css du plugin appelant des images
-                  dest: 'less/output.less'   //fichier de sortie qu'il faudra inclure
-              },
-              {
-                  src: 'vendors/plugin2/plugin2.css', //fichier css du plugin appelant des images
-                  dest: 'less/output2.less'   //fichier de sortie qu'il faudra inclure
-              }
-          ]
       }
     }
   });
@@ -76,13 +52,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-smushit');
-  grunt.loadNpmTasks('grunt-css-img-2-data-uri');
 
   grunt.registerTask('default', ['recess','uglify']);
   grunt.registerTask('mincss', 'recess');
   grunt.registerTask('minjs', 'uglify');
-  grunt.registerTask('minjs:vendors', 'uglify:vendors');
-  grunt.registerTask('minjs:front', 'uglify:front');
-  grunt.registerTask('minjscss', ['recess','uglify:front']);
-  grunt.registerTask('plugins', 'css_img_2_data_uri');
+  grunt.registerTask('minjscss', ['recess','uglify']);
+
+  grunt.registerTask('minjs:flexbox', 'uglify:flexbox');
 };
