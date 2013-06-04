@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 	},
 
     uglify: {
-	  flexbox: {
+	  fixed: {
 		src: [
 			'vendors/fixed-fixed/fixedfixed.js'
 		],
@@ -58,5 +58,5 @@ module.exports = function(grunt) {
   grunt.registerTask('minjs', 'uglify');
   grunt.registerTask('minjscss', ['recess','uglify']);
 
-  grunt.registerTask('minjs:flexbox', 'uglify:flexbox');
+  grunt.registerTask('minjs:fixed', 'uglify:fixed');
 };
