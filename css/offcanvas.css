@@ -460,7 +460,7 @@ body {
   width: 100%;
 }
 
-#nav {
+.nav {
   position: relative;
   z-index: 200;
   width: 100%;
@@ -468,11 +468,11 @@ body {
   color: #fff;
 }
 
-#nav .close-btn {
+.nav .close-btn {
   display: none;
 }
 
-#nav .block-title {
+.nav .block-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -483,33 +483,33 @@ body {
   border: 0;
 }
 
-#nav .block {
+.nav .block {
   position: relative;
   z-index: 2;
   padding: 0.75em 1.25em;
   background: #333333;
 }
 
-#nav ul {
+.nav ul {
   display: block;
   *zoom: 1;
 }
 
-#nav ul:before,
-#nav ul:after {
+.nav ul:before,
+.nav ul:after {
   display: table;
   content: "";
 }
 
-#nav ul:after {
+.nav ul:after {
   clear: both;
 }
 
-#nav li {
+.nav li {
   display: block;
 }
 
-#nav li a {
+.nav li a {
   display: block;
   font-size: 0.875em;
   font-weight: bold;
@@ -518,13 +518,13 @@ body {
   outline: none;
 }
 
-#nav li a:focus,
-#nav li a:hover {
+.nav li a:focus,
+.nav li a:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
 }
 
-#nav li.is-active a {
+.nav li.is-active a {
   color: #fff;
 }
 
@@ -547,6 +547,11 @@ body {
   position: absolute;
   top: 1.5em;
   left: 1.875em;
+}
+
+#top #nav-open-btn-right {
+  right: 1.875em;
+  left: auto;
 }
 
 #main {
@@ -572,7 +577,7 @@ footer[role="contentinfo"] {
     clip: rect(0 0 0 0);
     border: 0;
   }
-  #nav .close-btn {
+  .nav .close-btn {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -582,7 +587,7 @@ footer[role="contentinfo"] {
     clip: rect(0 0 0 0);
     border: 0;
   }
-  #nav .block-title {
+  .nav .block-title {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -592,52 +597,52 @@ footer[role="contentinfo"] {
     clip: rect(0 0 0 0);
     border: 0;
   }
-  #nav ul {
+  .nav ul {
     text-align: center;
     white-space: nowrap;
   }
-  #nav li {
+  .nav li {
     display: inline-block;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
   }
-  #nav li:last-child {
+  .nav li:last-child {
     border-right: none;
   }
-  #nav li a {
+  .nav li a {
     padding: 0.42857em 0.85714em;
   }
 }
 
 @media screen and (max-width: 45em) {
-  #nav {
+  .nav {
     position: absolute;
     top: 0;
     padding-top: 5.25em;
   }
-  #nav:not(:target) {
+  .nav:not(:target) {
     z-index: 1;
     height: 0;
   }
-  #nav:target .close-btn {
+  .nav:target .close-btn {
     display: block;
   }
-  #nav .close-btn {
+  .nav .close-btn {
     position: absolute;
     top: -3.75em;
     left: 1.875em;
   }
-  #nav .block {
+  .nav .block {
     position: relative;
     padding: 0;
   }
-  #nav li {
+  .nav li {
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-  #nav li:last-child {
+  .nav li:last-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  #nav li.is-active:after {
+  .nav li.is-active:after {
     position: absolute;
     top: 50%;
     right: -0.03125em;
@@ -649,10 +654,10 @@ footer[role="contentinfo"] {
     border-bottom: 0.625em transparent solid;
     content: "";
   }
-  #nav li a {
+  .nav li a {
     padding: 0.85714em 2.14286em;
   }
-  .js-ready #nav {
+  .js-ready .nav {
     width: 70%;
     height: 100%;
     background: #333333;
@@ -660,20 +665,20 @@ footer[role="contentinfo"] {
        -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
             box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
   }
-  .js-ready #nav .block {
+  .js-ready .nav .block {
     background: transparent;
   }
-  .js-ready #nav .close-btn {
+  .js-ready .nav .close-btn {
     display: block;
     opacity: 0.7;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   }
-  .js-ready #nav .close-btn:focus,
-  .js-ready #nav .close-btn:hover {
+  .js-ready .nav .close-btn:focus,
+  .js-ready .nav .close-btn:hover {
     opacity: 1;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   }
-  .js-ready #nav {
+  .js-ready .nav {
     left: -70%;
   }
   .js-ready #inner-wrap {
@@ -682,7 +687,19 @@ footer[role="contentinfo"] {
   .js-nav #inner-wrap {
     left: 70%;
   }
-  .csstransforms3d.csstransitions.js-ready #nav {
+  .js-ready.offRight .nav {
+    right: -70%;
+    left: auto !important;
+  }
+  .js-ready.offRight #inner-wrap {
+    right: 0;
+    left: auto !important;
+  }
+  .js-nav.offRight #inner-wrap {
+    right: 70%;
+    left: auto !important;
+  }
+  .csstransforms3d.csstransitions.js-ready .nav {
     left: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
        -moz-transform: translate3d(-100%, 0, 0);
@@ -719,7 +736,7 @@ footer[role="contentinfo"] {
          -o-transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
             transform: translate3d(70%, 0, 0) scale3d(1, 1, 1);
   }
-  .csstransforms3d.csstransitions.js-ready #nav .block {
+  .csstransforms3d.csstransitions.js-ready .nav .block {
     opacity: 0.7;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     -webkit-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
@@ -738,7 +755,74 @@ footer[role="contentinfo"] {
          -o-transform-origin: 50% 0;
             transform-origin: 50% 0;
   }
-  .csstransforms3d.csstransitions.js-nav #nav .block {
+  .csstransforms3d.csstransitions.js-nav .nav .block {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .csstransforms3d.csstransitions.js-ready.offRight .nav {
+    right: 0;
+    left: auto;
+    -webkit-transform: translate3d(100%, 0, 0);
+       -moz-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
+         -o-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .csstransforms3d.csstransitions.js-ready.offRight #inner-wrap {
+    right: 0 !important;
+    left: auto !important;
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease;
+       -moz-transition: -moz-transform 500ms ease;
+         -o-transition: -o-transform 500ms ease;
+            transition: transform 500ms ease;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .csstransforms3d.csstransitions.js-nav.offRight #inner-wrap {
+    -webkit-transform: translate3d(-70%, 0, 0) scale3d(1, 1, 1);
+       -moz-transform: translate3d(-70%, 0, 0) scale3d(1, 1, 1);
+        -ms-transform: translate3d(-70%, 0, 0) scale3d(1, 1, 1);
+         -o-transform: translate3d(-70%, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(-70%, 0, 0) scale3d(1, 1, 1);
+  }
+  .csstransforms3d.csstransitions.js-ready.offRight .nav .block {
+    opacity: 0.7;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    -webkit-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+       -moz-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+        -ms-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+         -o-transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+            transform: translate3d(70%, 0, 0) scale3d(0.9, 0.9, 0.9);
+    -webkit-transition: opacity 300ms 100ms, -webkit-transform 500ms ease;
+       -moz-transition: opacity 300ms 100ms ease, -moz-transform 500ms ease;
+         -o-transition: opacity 300ms 100ms ease, -o-transform 500ms ease;
+            transition: opacity 300ms 100ms ease, transform 500ms ease;
+    -webkit-transition-delay: ease, 0s;
+    -webkit-transform-origin: 50% 0;
+       -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+         -o-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  .csstransforms3d.csstransitions.js-nav.offRight .nav .block {
     opacity: 1;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     -webkit-transform: translate3d(0, 0, 0);

@@ -72,7 +72,9 @@
 
             nav_open = false,
 
-            nav_class = 'js-nav';
+            nav_class = 'js-nav',
+            nav_class_left = 'offLeft',
+            nav_class_right = 'offRight';
 
 
         app.init = function()
@@ -90,7 +92,8 @@
                 nav_open = false;
             };
 
-            app.closeNav =function()
+            //Slide Left
+            app.closeNavLeft =function()
             {
                 if (nav_open) {
                     // close navigation after transition or immediately
@@ -101,42 +104,95 @@
                         closeNavEnd(null);
                     }
                 }
-                removeClass(doc, nav_class);
+                removeClass(doc, nav_class +' '+ nav_class_left);
             };
 
-            app.openNav = function()
+            app.openNavLeft = function()
             {
                 if (nav_open) {
                     return;
                 }
-                addClass(doc, nav_class);
+                addClass(doc, nav_class +' '+ nav_class_left);
                 nav_open = true;
             };
 
-            app.toggleNav = function(e)
+            app.toggleNavLeft = function(e)
             {
-                if (nav_open && hasClass(doc, nav_class)) {
-                    app.closeNav();
+                if (nav_open && hasClass(doc,nav_class_left)) {
+                    app.closeNavLeft();
                 } else {
-                    app.openNav();
+                    app.openNavLeft();
                 }
                 if (e) {
                     e.preventDefault();
                 }
             };
 
+            //Slide Right
+            app.closeNavRight =function()
+            {
+                if (nav_open) {
+                    // close navigation after transition or immediately
+                    var duration = (transition_end && transition_prop) ? parseFloat(window.getComputedStyle(inner, '')[transition_prop + 'Duration']) : 0;
+                    if (duration > 0) {
+                        document.addEventListener(transition_end, closeNavEnd, false);
+                    } else {
+                        closeNavEnd(null);
+                    }
+                }
+                removeClass(doc, nav_class +' '+ nav_class_right);
+            };
+
+            app.openNavRight = function()
+            {
+                if (nav_open) {
+                    return;
+                }
+                addClass(doc, nav_class +' '+ nav_class_right);
+                nav_open = true;
+            };
+
+            app.toggleNavRight = function(e)
+            {
+                if (nav_open && hasClass(doc, nav_class +' '+ nav_class_right)) {
+                    app.closeNavRight();
+                } else {
+                    app.openNavRight();
+                }
+                if (e) {
+                    e.preventDefault();
+                }
+            };
+
+            //ALL
+            app.toggleNav = function(e)
+            {
+                if (nav_open && hasClass(doc, nav_class +' '+ nav_class_right)) {
+                    app.closeNavRight();
+                } else if (nav_open && hasClass(doc, nav_class +' '+ nav_class_left)) {
+                    app.closeNavLeft();
+                }
+
+                if (e) {
+                    e.preventDefault();
+                }
+            };
+
+
+
             // open nav with main "nav" button
-            document.getElementById('nav-open-btn').addEventListener('click', app.toggleNav, false);
+            document.getElementById('nav-open-btn-left').addEventListener('click', app.toggleNavLeft, false);
+            document.getElementById('nav-open-btn-right').addEventListener('click', app.toggleNavRight, false);
 
             // close nav with main "close" button
             document.getElementById('nav-close-btn').addEventListener('click', app.toggleNav, false);
 
             // close nav by touching the partial off-screen content
-            document.addEventListener('click', function(e)
+            document.getElementById('main').addEventListener('click', function(e)
             {
                 if (nav_open && !hasParent(e.target, 'nav')) {
                     e.preventDefault();
-                    app.closeNav();
+                    app.toggleNav();
                 }
             },
             true);
