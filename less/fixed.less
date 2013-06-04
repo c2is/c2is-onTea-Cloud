@@ -1,0 +1,20 @@
+/* Project: FLEXBOX - Date: 20120806 - Author: C2iS.fr > DJO */
+@import "../vendors/c2is-less/reset.less";
+
+/* LAYOUT */
+
+body{font:1em/1.2em sans-serif;padding:40px 0}
+
+//on defini les elements fixed en position absolue par defaut -->
+.top, .bottom{position:absolute;left:0;right:0;height:40px;line-height:40px;background:#C5C5C5;color:#4272DB;text-align:center;
+    h1{margin:0}
+}
+.top{top:0}
+.bottom{bottom:0}
+
+
+section{padding:1em}
+
+//ensuite on les positionnent en fixed via la class ".fixed-supported" du plugin
+.fixed-supported .top{position:fixed;}
+.fixed-supported .bottom{position:fixed;}

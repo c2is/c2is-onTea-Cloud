@@ -25,9 +25,9 @@ module.exports = function(grunt) {
     uglify: {
 	  flexbox: {
 		src: [
-			'js/flexbox.js'
+			'vendors/fixed-fixed/fixedfixed.js'
 		],
-		dest: 'js/min/flexbox.min.js'
+		dest: 'js/min/fixed.min.js'
 	  }
     },
 
@@ -40,8 +40,8 @@ module.exports = function(grunt) {
           'css/normalize.css': [
 			'vendors/normalize-css/normalize.css'
           ],
-          'css/flexbox.css': [
-             'less/flexbox.less'
+          'css/fixed.css': [
+             'less/fixed.less'
           ]
         }
       }

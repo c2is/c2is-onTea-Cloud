@@ -4,6 +4,8 @@
   "dependencies": {
     "jquery": "1.9.1",
     "modernizr": "latest",
-    "normalize-css": "~2.1.0"
+    "normalize-css": "~2.1.0",
+    "c2is-less": "https://github.com/c2is/c2is-less-component.git",
+    "fixedfixed": "https://github.com/filamentgroup/fixed-fixed.git"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "name": "c2is-less",
+  "author": {
+    "name": "C2iS"
+  },
+  "version": "0.0.0",
+  "homepage": "https://github.com/c2is/c2is-less-component/",
+  "styles": [
+    "c2is-less"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c2is/c2is-less-component.git"
+  },
+  "gitHead": "b19b364f5983323e74d6165562333ecb39240d63",
+  "readme": "c2is-less-component\n",
+  "readmeFilename": "README",
+  "_id": "c2is-less@1.0.0",
+  "description": "c2is-less-component",
+  "commit": "b19b364f5983323e74d6165562333ecb39240d63"
+}

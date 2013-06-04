@@ -1,5 +1,5 @@
 <?php
-$aTarget = "_blank";
+$aTarget = "_self";
 $colorProject = "3a98aa";
 $dir_nom = '.'; // dossier listé (pour lister le répertoir courant : $dir_nom = '.'  --> ('point')
 $dir = opendir($dir_nom) or die('Erreur de listage : le répertoire n\'existe pas'); // on ouvre le contenu du dossier courant
