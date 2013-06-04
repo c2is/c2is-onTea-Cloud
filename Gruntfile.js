@@ -28,6 +28,12 @@ module.exports = function(grunt) {
 			'vendors/fixed-fixed/fixedfixed.js'
 		],
 		dest: 'js/min/fixed.min.js'
+	  },
+      offcanvas: {
+		src: [
+			'js/offcanvas.js'
+		],
+		dest: 'js/min/offcanvas.min.js'
 	  }
     },
 
@@ -42,6 +48,9 @@ module.exports = function(grunt) {
           ],
           'css/fixed.css': [
              'less/fixed.less'
+          ],
+          'css/offcanvas.css': [
+             'less/offcanvas.less'
           ]
         }
       }
@@ -59,4 +68,5 @@ module.exports = function(grunt) {
   grunt.registerTask('minjscss', ['recess','uglify']);
 
   grunt.registerTask('minjs:fixed', 'uglify:fixed');
+  grunt.registerTask('minjs:offcanvas', 'uglify:offcanvas');
 };
