@@ -90,7 +90,6 @@
                     document.removeEventListener(transition_end, closeNavEnd, false);
                     removeClass(doc, nav_class_left);
                     removeClass(doc, nav_class_right);
-                    removeClass(doc, nav_class);
                 }
                 nav_open = false;
             };
@@ -115,13 +114,14 @@
                 if (nav_open) {
                     return;
                 }
-                addClass(doc, nav_class +' '+ nav_class_left);
+                addClass(doc, nav_class);
+                addClass(doc, nav_class_left);
                 nav_open = true;
             };
 
             app.toggleNavLeft = function(e)
             {
-                if (nav_open && hasClass(doc,nav_class_left)) {
+                if (nav_open && hasClass(doc, nav_class_left)) {
                     app.closeNavLeft();
                 } else {
                     app.openNavLeft();
@@ -151,13 +151,14 @@
                 if (nav_open) {
                     return;
                 }
-                addClass(doc, nav_class +' '+ nav_class_right);
+                addClass(doc, nav_class);
+                addClass(doc, nav_class_right);
                 nav_open = true;
             };
 
             app.toggleNavRight = function(e)
             {
-                if (nav_open && hasClass(doc, nav_class +' '+ nav_class_right)) {
+                if (nav_open && hasClass(doc, nav_class) && hasClass(doc,nav_class_right)) {
                     app.closeNavRight();
                 } else {
                     app.openNavRight();
@@ -170,9 +171,9 @@
             //ALL
             app.toggleNav = function(e)
             {
-                if (nav_open && hasClass(doc, nav_class +' '+ nav_class_right)) {
+                if (nav_open && hasClass(doc, nav_class) && hasClass(doc, nav_class_right)) {
                     app.closeNavRight();
-                } else if (nav_open && hasClass(doc, nav_class +' '+ nav_class_left)) {
+                } else if (nav_open && hasClass(doc, nav_class) && hasClass(doc,nav_class_left)) {
                     app.closeNavLeft();
                 }
 

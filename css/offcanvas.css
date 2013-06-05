@@ -806,11 +806,11 @@ footer[role="contentinfo"] {
   .csstransforms3d.csstransitions.js-ready.offRight .nav .block {
     opacity: 0.7;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-    -webkit-transform: translate3d(70%, 0, 0);
-       -moz-transform: translate3d(70%, 0, 0);
-        -ms-transform: translate3d(70%, 0, 0);
+    -webkit-transform: translate3d(-70%, 0, 0);
+       -moz-transform: translate3d(-70%, 0, 0);
+        -ms-transform: translate3d(-70%, 0, 0);
          -o-transform: translate3d(70%, 0, 0);
-            transform: translate3d(70%, 0, 0);
+            transform: translate3d(-70%, 0, 0);
     -webkit-transition: opacity 300ms 100ms, -webkit-transform 500ms ease;
        -moz-transition: opacity 300ms 100ms ease, -moz-transform 500ms ease;
          -o-transition: opacity 300ms 100ms ease, -o-transform 500ms ease;
