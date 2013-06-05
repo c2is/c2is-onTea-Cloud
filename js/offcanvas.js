@@ -88,6 +88,9 @@
             {
                 if (e && e.target === inner) {
                     document.removeEventListener(transition_end, closeNavEnd, false);
+                    removeClass(doc, nav_class_left);
+                    removeClass(doc, nav_class_right);
+                    removeClass(doc, nav_class);
                 }
                 nav_open = false;
             };
@@ -104,7 +107,7 @@
                         closeNavEnd(null);
                     }
                 }
-                removeClass(doc, nav_class +' '+ nav_class_left);
+                removeClass(doc, nav_class);
             };
 
             app.openNavLeft = function()
@@ -140,7 +143,7 @@
                         closeNavEnd(null);
                     }
                 }
-                removeClass(doc, nav_class +' '+ nav_class_right);
+                removeClass(doc, nav_class);
             };
 
             app.openNavRight = function()
