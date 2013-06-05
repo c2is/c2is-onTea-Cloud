@@ -90,6 +90,11 @@
                     document.removeEventListener(transition_end, closeNavEnd, false);
                     removeClass(doc, nav_class_left);
                     removeClass(doc, nav_class_right);
+                }else{
+                    setTimeout(function() {
+                        removeClass(doc, nav_class_left);
+                        removeClass(doc, nav_class_right);
+                    },300);
                 }
                 nav_open = false;
             };
