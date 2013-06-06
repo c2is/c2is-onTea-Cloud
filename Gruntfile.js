@@ -51,9 +51,6 @@ module.exports = function(grunt) {
           ],
           'css/offcanvas.css': [
              'less/offcanvas.less'
-          ],
-          'css/offcanvas.css': [
-             'less/offcanvas.less'
           ]
         }
       }

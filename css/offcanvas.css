@@ -424,11 +424,6 @@ footer {
 
 .js-nav.inlinesvg .offcanvas {
   height: 100%;
-  overflow: hidden;
-}
-
-.js-nav.inlinesvg .offcanvas .offcanvasContainer {
-  height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
           overflow-scrolling: touch;

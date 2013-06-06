@@ -212,7 +212,6 @@
 
             addClass(doc, 'js-ready');
 
-//            var viewportHeight = document.documentElement.clientHeight;
             var mainHeight = document.getElementById('main').scrollHeight;
             var offcanvasHeight = document.getElementById('offcanvas').scrollHeight;
 
