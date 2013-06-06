@@ -1,3 +1,7 @@
+/* COSMETICS : no need */
+
+/* OFFCANVAS COSMETICS ONLY */
+
 /*GLOBAL RESET*/
 
 html,
@@ -308,41 +312,12 @@ textarea {
   zoom: 1;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   font: 1em/1.2em sans-serif;
 }
 
-#wrap {
-  position: relative;
-  width: 100%;
-  padding: 50px 0;
-  overflow: hidden;
-}
-
-#content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-header,
-footer {
-  opacity: 0;
-  -webkit-transition: opacity .3s ease;
-     -moz-transition: opacity .3s ease;
-       -o-transition: opacity .3s ease;
-          transition: opacity .3s ease;
-}
-
-/* HEADER */
-
-header {
+.offHeader {
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -352,32 +327,18 @@ header {
   background: lightgrey;
 }
 
-header h1 {
+.offHeader h1 {
   display: inline-block;
-}
-
-header #btOffLeft {
-  display: block;
-  float: left;
-  margin: 0 0 0 10px;
-}
-
-header #btOffRight {
-  display: block;
-  float: right;
-  margin: 0 10px 0 0;
 }
 
 .fixed-supported header,
 .fixed-supported footer {
   position: fixed;
   z-index: 100;
-  opacity: 1;
 }
 
-/* FOOTER */
-
-footer {
+.offFooter {
+  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -387,20 +348,59 @@ footer {
   background: lightgrey;
 }
 
-/* CONTENT */
-
 #main article {
   padding: 1em;
   text-align: justify;
 }
 
-/* OFFCANVAS */
+#btOffLeft {
+  display: block;
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+#btOffRight {
+  display: block;
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.offcanvas {
+  background: #add8e6;
+}
+
+/* PLUGIN OFFCANVAS */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fixed-supported header,
+.fixed-supported footer {
+  position: fixed;
+  z-index: 100;
+}
 
 .offcanvas {
   position: absolute;
   top: 0;
   width: 100;
-  background: lightblue;
 }
 
 .offcanvas:not(:target) {
