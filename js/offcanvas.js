@@ -1,6 +1,7 @@
 /*!
 *
 * Copyright (c) David Bushell | http://dbushell.com/
+* Modified by DJO @ C2iS
 *
 */
 (function(window, document, undefined)

@@ -5,7 +5,7 @@ L'objectif de C2iS-OneTea-Cloud est de mettre en place un Cloud de plugins stand
 
 ## Liste des plugins
 - Positions Fixed (DONE)
-- OffCanvas
+- OffCanvas (DONE)
 - Page transitions
 - Tooltips
 - Slider
