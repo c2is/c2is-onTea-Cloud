@@ -331,6 +331,15 @@ body {
   height: 100%;
 }
 
+header,
+footer {
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+     -moz-transition: opacity .3s ease;
+       -o-transition: opacity .3s ease;
+          transition: opacity .3s ease;
+}
+
 /* HEADER */
 
 header {
@@ -363,6 +372,7 @@ header #btOffRight {
 .fixed-supported footer {
   position: fixed;
   z-index: 100;
+  opacity: 1;
 }
 
 /* FOOTER */
@@ -390,7 +400,7 @@ footer {
   position: absolute;
   top: 0;
   width: 100;
-  background: grey;
+  background: lightblue;
 }
 
 .offcanvas:not(:target) {
@@ -404,19 +414,20 @@ footer {
   left: -70%;
   width: 70%;
   height: 100%;
-  background: #d3d3d3;
 }
 
 .js-nav.inlinesvg #wrap,
 .js-nav.inlinesvg #main {
   height: 100%;
-}
-
-.js-nav.inlinesvg #main {
   overflow: hidden;
 }
 
 .js-nav.inlinesvg .offcanvas {
+  height: 100%;
+  overflow: hidden;
+}
+
+.js-nav.inlinesvg .offcanvas .offcanvasContainer {
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;

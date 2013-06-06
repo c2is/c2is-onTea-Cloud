@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     uglify: {
 	  fixed: {
 		src: [
-			'vendors/fixed-fixed/fixedfixed.js'
+			'js/fixed.js'
 		],
 		dest: 'js/min/fixed.min.js'
 	  },

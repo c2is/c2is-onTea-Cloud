@@ -112,6 +112,7 @@
                     }
                 }
                 removeClass(doc, nav_class);
+                app.resetHeight();
             };
 
             app.openNavLeft = function()
@@ -122,6 +123,7 @@
                 addClass(doc, nav_class);
                 addClass(doc, nav_class_left);
                 nav_open = true;
+                app.setHeight();
             };
 
             app.toggleNavLeft = function(e)
@@ -149,6 +151,7 @@
                     }
                 }
                 removeClass(doc, nav_class);
+                app.resetHeight();
             };
 
             app.openNavRight = function()
@@ -159,6 +162,7 @@
                 addClass(doc, nav_class);
                 addClass(doc, nav_class_right);
                 nav_open = true;
+                app.setHeight();
             };
 
             app.toggleNavRight = function(e)
@@ -207,6 +211,21 @@
             true);
 
             addClass(doc, 'js-ready');
+
+//            var viewportHeight = document.documentElement.clientHeight;
+            var mainHeight = document.getElementById('main').scrollHeight;
+            var offcanvasHeight = document.getElementById('offcanvas').scrollHeight;
+
+            app.setHeight = function() {
+                if ( mainHeight < offcanvasHeight ) {
+                    document.getElementById('main').style.height = offcanvasHeight+'px';
+                }
+            }
+
+            app.resetHeight = function() {
+                document.getElementById('main').style.height = mainHeight+'px';
+            }
+
 
         };
 
