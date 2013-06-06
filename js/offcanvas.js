@@ -190,11 +190,11 @@
 
 
             // open nav with main "nav" button
-            document.getElementById('nav-open-btn-left').addEventListener('click', app.toggleNavLeft, false);
-            document.getElementById('nav-open-btn-right').addEventListener('click', app.toggleNavRight, false);
+            document.getElementById('btOffLeft').addEventListener('click', app.toggleNavLeft, false);
+            document.getElementById('btOffRight').addEventListener('click', app.toggleNavRight, false);
 
             // close nav with main "close" button
-            document.getElementById('nav-close-btn').addEventListener('click', app.toggleNav, false);
+            document.getElementById('btOffClose').addEventListener('click', app.toggleNav, false);
 
             // close nav by touching the partial off-screen content
             document.getElementById('main').addEventListener('click', function(e)
