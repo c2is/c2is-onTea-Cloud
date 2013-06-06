@@ -68,7 +68,7 @@
 
         var _init = false, app = { };
 
-        var inner = document.getElementById('inner-wrap'),
+        var inner = document.getElementById('content'),
 
             nav_open = false,
 
